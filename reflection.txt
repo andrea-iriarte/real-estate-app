@@ -1,0 +1,55 @@
+December 2: File and Folder Structure
+
+The first part of the tutorial consisted of importing all of the necessary dependencies, 
+creating a Banner template, as well as initializing two specific instances of that banner 
+dependent on 'purpose'. 
+
+The project uses Next.JS, React, ChakraUI, and RapidApi, and a few other resources. 
+
+To set up the project, the basic Next.JS template was downloaded using npx create-next-app@latest ./
+in the terminal, downloading all of the files directly in the current directory. The dependencies were
+installed using an 'npm install' command. 
+
+So far, the main code for the app has gone in the default 'index.js' file found in the pages folder.
+The necessary ChakraUI components were imported at the top of the file along with the 'Image' and 'Link'
+next.js components
+
+The imported Chakra components are similar to MaterialUI components and function like 
+custom and stylized HTML elements with special properties that can be modified.
+
+in order to add JSX to the project, the .babelrc file was added to the root folder containing
+only two lines of code: 
+{
+    "presets": ["next/babel"],
+    "plugins": []
+}
+
+a free account is necessary to access RapidApi's library of APIs, however, not everything is free,
+and pricing is at least somewhat dependent on useage. 
+
+in order to connect to the Bayut Api, i first subscribed to the service for testing access. 
+we then created the fetchApi.js file in a utils folder and copied and pasted the appropriate information
+as necessary. 
+
+in the index file, Next.js's getStaticProps hook was used to asychronously call the fetchApi function
+with the specified paramters. 
+
+the results were stored in two separate variables dependent on purpose (which is a parameter from the
+API) 
+
+since the two homepage images were sourced from the internet, the next.config.js file also had to be
+edited. specifically, it had to include an image object the listed the relevant domains
+
+i felt like i gained a greater grasp of function exportation with this project
+
+to export specific functions or variables into an external file, simply add the 'export' keyword 
+at the beginning. then, in the external file, import the functions or variables using:
+
+import { functionName, variableName } from 'relativePath' 
+
+December 3: Properties, Nav and Footer, Search
+
+filter queries require default values as stand ins for the fetchApi 
+request
+
+
